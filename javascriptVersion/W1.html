@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Kelvin Calculator
+        </title>
+        <script>
+           function convert()
+              {
+                var x = document.getElementById("dtemp").value;
+                x = parseInt(x);
+                if(x)
+                 {
+                   if(document.getElementById("c").checked)
+                      x = x + 273.15;
+                   else if(document.getElementById("f").checked)
+                      x = x + 459.67 * (5/9);
+                   else
+                      x = x * (5/9);
+                   alert("Converted Kelvin Unit: "+x);
+                 }
+                else
+                 alert("Kindly Enter Ineger Numbers For temperatures");        
+               }
+        </script>
+    </head>
+    <body style = "background-color:skyblue;">
+        <input type="radio" name="temp" value="c" id="c" checked>Celsius<br>
+        <input type="radio" name="temp" value="f" id="f">Fahrenheit<br>
+        <input type="radio" name="temp" value="r" id="r">Rankine<br>
+        <br>
+        <br>
+        Enter the temperature:
+        <input type="text" name="dtemp" id="dtemp" required>
+        <br><br>
+        <button onclick="convert()">Submit</button>
+        <br><br><br>
+        <p id="message"></p>
+
+    </body>
+    
+    
+</html>
+
+
+
+
+
